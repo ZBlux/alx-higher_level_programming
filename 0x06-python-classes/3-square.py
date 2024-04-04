@@ -3,17 +3,21 @@
 
 
 class Square:
-    """
+    """Represents a square with a private size attribute.
+
     Attributes:
-        __size (int): size of a side of the square
+        __size (int): The size of a side of the square.
     """
+
     def __init__(self, size=0):
-        """
+        """Initialize a new Square instance.
+
         Args:
-            size: size and must be an int
-        Raises :
-            TypeError: size not int
-            ValueError: size < 0
+            size (int): The size of a side of the square. Defaults to 0.
+
+        Raises:
+            TypeError: If 'size' is not an integer.
+            ValueError: If 'size' is less than 0.
         """
         if type(size) is int:
             if size < 0:
@@ -22,10 +26,11 @@ class Square:
                 self.__size = size
         else:
             raise TypeError('size must be an integer')
-    def area(self):
-        """
-        area of square:
-            Returns:
-                size**2 or size*size
+
+        def area(self):
+        """Calculate the area of the square.
+
+        Returns:
+            The area of the square, calculated by size squared.
         """
         return(self.__size ** 2)
