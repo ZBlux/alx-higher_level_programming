@@ -11,6 +11,9 @@ class Square:
         """
         Args:
             size: size and must be an int
+        Raises :
+            TypeError: size not int
+            ValueError: size < 0
         """
         self.__size = size
 
