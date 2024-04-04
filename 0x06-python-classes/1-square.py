@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square class square.py"""
 
+
 class Square:
     """
     Attributes:
