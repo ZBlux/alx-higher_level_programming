@@ -38,7 +38,6 @@ class Rectangle:
         return self.__width
 
     @width.setter
-
     def width(self, value):
         """Set the width of the rectangle.
         Args:
@@ -85,6 +84,7 @@ class Rectangle:
             int: area
         """
         return self.__width*self.__height
+
     def perimeter(self):
         """Calculates perimeter of a rectangle
         Returns:
