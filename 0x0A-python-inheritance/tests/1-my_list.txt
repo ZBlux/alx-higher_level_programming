@@ -26,7 +26,7 @@
 
 
 # Test Case 1: Creating an empty MyList
-# Expected Output: An empty list::
+# Expected Output: An empty list:
 	>>> my_list = MyList()
 	>>> my_list
 	[]
