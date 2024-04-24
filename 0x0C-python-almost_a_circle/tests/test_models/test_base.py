@@ -17,10 +17,8 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-
 class TestBase_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Base class."""
-
 
     def test_no_arg(self):
         b1 = Base()
@@ -109,7 +107,6 @@ class TestBase_instantiation(unittest.TestCase):
 class TestBase_to_json_string(unittest.TestCase):
     """Unittests for testing to_json_string method of Base class."""
 
-
     def test_to_json_string_rectangle_type(self):
         r = Rectangle(10, 7, 2, 8, 6)
         self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
@@ -155,7 +152,6 @@ class TestBase_to_json_string(unittest.TestCase):
 
 class TestBase_save_to_file(unittest.TestCase):
     """Unittests for testing save_to_file method of Base class."""
-
 
     @classmethod
     def tearDown(self):
@@ -235,7 +231,6 @@ class TestBase_save_to_file(unittest.TestCase):
 class TestBase_from_json_string(unittest.TestCase):
     """Unittests for testing from_json_string method of Base class."""
 
-
     def test_from_json_string_type(self):
         list_input = [{"id": 89, "width": 10, "height": 4}]
         json_list_input = Rectangle.to_json_string(list_input)
@@ -290,7 +285,6 @@ class TestBase_from_json_string(unittest.TestCase):
 class TestBase_create(unittest.TestCase):
     """Unittests for testing create method of Base class."""
 
-
     def test_create_rectangle_original(self):
         r1 = Rectangle(3, 5, 1, 2, 7)
         r1_dictionary = r1.to_dictionary()
@@ -342,7 +336,6 @@ class TestBase_create(unittest.TestCase):
 
 class TestBase_load_from_file(unittest.TestCase):
     """Unittests for testing load_from_file_method of Base class."""
-
 
     @classmethod
     def tearDown(self):
@@ -409,7 +402,6 @@ class TestBase_load_from_file(unittest.TestCase):
 
 class TestBase_save_to_file_csv(unittest.TestCase):
     """Unittests for testing save_to_file_csv method of Base class."""
-
 
     @classmethod
     def tearDown(self):
@@ -489,7 +481,6 @@ class TestBase_save_to_file_csv(unittest.TestCase):
 class TestBase_load_from_file_csv(unittest.TestCase):
     """Unittests for testing load_from_file_csv method of Base class."""
 
-
     @classmethod
     def tearDown(self):
         """Delete any created files."""
@@ -551,7 +542,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()
