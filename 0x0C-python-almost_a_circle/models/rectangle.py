@@ -105,6 +105,7 @@ class Rectangle(Base):
                 - 5th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
         """
+
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -151,6 +152,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return the print() and str() representation of the Rectangle."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x, self.y,
-                                                       self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height
+                )
